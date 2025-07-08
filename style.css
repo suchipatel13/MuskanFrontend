@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: bold;
+    size: 100vh;
+}
+
+
+body {
+    background-color: #71c6e6; /* Light neutral fallback */
+    background-attachment: fixed; /* Fixes scrolling mismatch */
+    background-size: cover; /* Ensures gradient fully covers the viewport */
+    background-repeat: no-repeat; /* Prevents gradient tiling */
+    background: linear-gradient(to bottom, #fdf3e6, #f9f5ee 60%, #ffffff); /* Luxurious cream gradient */
+    min-height: 100vh; /* Ensures gradient spans the entire viewport */
+    margin: 0; /* Removes default margins */
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    color: #555; /* Softer dark text for readability */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    line-height: 1.6; /* Better text readability */
+}
+
+.header-container {
+    display: flex;
+    align-items: left; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between logo and tabs */
+    padding: 10px 30px; /* Add padding for spacing */
+    background:transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    position: relative;/* Optional: Subtle border at the bottom */
+
+}
+
+/* Logo Centered */
+.logo {
+    position: relative;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the very left */
+    padding: 10; /* Remove unnecessary padding */
+    display: flex; /* Ensure alignment */
+    align-items: center; /* Vertically center logo content */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.logo img {
+    width: 160px; /* Adjust the logo size */
+    height: auto;
+}
+
+
+.tab-container{
+    display: flex;
+    gap: 22px;
+    margin-left: auto;
+
+}
+
+.tab {
+    font-size: 25px; /* Text size */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    color: #333; /* Text color */
+    text-align: center; /* Align text */
+    font-family: 'Pacifico', cursive; /* Stylish font */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    background: none; /* Remove background color */
+    border: none; /* Remove any border */
+    padding: 0; /* Remove padding for no box appearance */
+    
+}
+
+.tab:hover {
+    color: rgb(218, 191, 231); /* Change text color on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    text-decoration: underline;
+
+}
+
+.contact-info {
+    border-radius: 20px;
+    border: solid 1px #ddd; /* Optional: define border color */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    margin-bottom: 35px;
+    background-color: white ;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(104, 103, 103, 0.1); /* Subtle shadow */
+}
+
+.contact-info:hover,
+.contact-info:focus-visible{
+    transform: translateY(-1.00rem);
+    transition: transform 200ms;
+}
+.contact-info h2{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    
+  
+}
+
+.contact-info p{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.Book h3, .Book p {
+    font-family: 'Pacifico', cursive;
+
+}
+.Book {
+    border-radius: 20px;
+    border: solid 1px #ddd;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically inside the box */
+    padding: 15px 20px;
+    background-color: white;
+    justify-content: center; /* Centers content vertically */
+    text-align: center; /* Centers text horizontally */
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(104, 103, 103, 0.1); /* Subtle shadow */
+    position: absolute; /* Make the position relative to the page */
+    top: 115%; /* Center it vertically */
+    right: 25%; /* Move it to the right */
+}
+
+.Book:hover,
+.Book:focus-visible {
+    transform: translateY(-1.00rem);
+    transition: transform 200ms;
+}
+.book-now-button{
+    font-family: 'Pacifico', cursive;
+
+    padding: 10px 20px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3 ease, tranform 0.3s ease;
+}
+
+
+.Welcome h1 {
+    font-size: 100px; /* Adjust heading size */
+    margin: 10px 0; /* Optional: Add spacing */
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+    height: 100%;
+    font-family: Didot;  /* For headings and special text */
+    opacity: 0;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; /* Apply the new animation */
+}
+
+/* Define the keyframes */
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.Welcome p, .Welcome p1 {
+    text-align: center; /* Center the text */
+    font-size: 45px; /* Large text */
+    padding: 50px; /* Add padding inside the element */
+    margin-top: 10px; /* Add spacing from the element above */
+    font-family: 'Lora', serif;
+    opacity: 0;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; /* Apply the new animation */
+}
+
+#footer {
+    border: solid rgba(0, 0, 0, 0.1); /* Subtle border for design */
+    text-align: center; /* Center-align text */
+    justify-content: center;
+    border-radius: 20px; /* Rounded edges */
+    margin-top: 40px;
+    padding: 12px;
+    background: inherit; /* Match the page background */
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    color: #333; /* Text color */
+    font-size: 14px; /* Standard footer font size */
+}
+
+
+
+
+.service-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures list items and other content stay left-aligned */
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.service-page h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 15px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center; /* Centers only the heading horizontally */
+    text-align: center; /* Centers text inside the heading */
+    
+}
+
+.dropdown-item{
+    margin-bottom: 20px auto;
+    overflow: hidden;
+    width:50%;
+    justify-content: flex-start;
+    text-align:center;
+    align-self: center;
+    padding:20px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    display: inline-block;
+    align-self: center;
+}
+
+.dropdown-header{
+    padding: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 15px;
+    font-size:20px;
+    text-align: center;
+    font-family: cursive;
+    width:100%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row if needed */
+    gap: 20px; /* Spacing between cards */
+    justify-content: space-around; /* Space around the cards */
+
+}
+
+.card{
+   padding: 20px;
+   border-top: 1px solid;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+   margin: 10px;
+   text-align: left;
+   flex: 1 1 calc(50% - 40px); /* Two cards in a row with space accounted for */
+   max-width: calc(50% - 40px); /* Ensures the cards don't exceed half the width */
+   box-sizing: border-box; /* Includes padding and border in width calculations */
+   margin-bottom: 20px;
+   background-color: #fff;
+   justify-content:space-around ;
+   width: 100%;
+
+}
+
+.card h2{
+    font-size: 20px; /* Larger font for titles */
+    margin-bottom: 10px; /* Spacing below the title */
+    color: #333; /* Darker color for the title */
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px; /* Standard font size for details */
+    line-height: 1.6; /* Improve readability with line spacing */
+    color: #666; /* Softer color for text */
+    margin-bottom: 10px; /* Add spacing below each paragraph */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+.schedule-button {
+    padding: 10px 30px;
+    background-color: #FF69B4; /* Pinkish color */
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.schedule-button:hover {
+    background-color: #e05692; /* Darker pink on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.schedule-button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modal-content {
+    position: absolute; /* Position relative to the modal */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half the modal's size */
+    background-color: white; /* Background of the modal */
+    padding: 20px; /* Padding inside the modal */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Shadow */
+    max-width: 500px; /* Set a max width for the modal */
+    width: 90%; /* Make it responsive */
+    max-height: 80%; /* Allow scrolling if content exceeds height */
+    overflow-y: auto; /* Enable scrolling inside the modal */
+}
+.modal-content h4 {
+    display: block;
+    text-align: center;
+    margin: 0 0 2px 0; /* Ensure no top margin and proper spacing below */
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="phone"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+select optgroup{
+    padding: 5px ;
+    display: block;
+    border-style: solid;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+select option{
+    padding: 5px;
+}
+label{
+    display: block;
+    font-size: 20px;
+    margin: 5px;
+}
+
+optgroup ::-ms-value
+/* General Styles for the About Us Section */
+.tabcontent {
+    padding: 20px;
+    border-radius: 9px;
+    margin: 20px auto;
+}
+
+
+/* Business Hours Section */
+#business-hours {
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px auto 35px auto; /* ⬅ This centers it horizontally */
+    position: relative;
+    background-color: #FFFEF2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+}
+
+#business-hours h4{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+/* Employees Section */
+#employees{
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: table-row;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    align-items: wrap;
+    margin-bottom: 35px;
+    background-color: #FFFEF2;
+    justify-content: left;
+    text-align: center;
+    width: 300px;
+    margin: 0px;
+    
+}
+
+#employees h5{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#employees p{
+    font-size: 17px;
+}
+
+/* Cancellation Policy Section */
+#cancellation-policy {
+    border-radius: 20px;
+    border: solid;
+    cursor: pointer;
+    display: table-row;
+    flex-direction: row;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    align-items: left;
+    position: relative;
+    margin-bottom: 35px;
+    background-color: #FFFEF2;
+    justify-content: left;
+    text-align: center;
+    width: 300px;
+}
+.instagram-logo {
+    width: 40px; /* Set the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add a hover effect */
+}
+
+
+#AboutUs h3{
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid;
+    flex-direction: column;
+    margin: 0 auto; 
+    display: inline-block; /* <-- This makes the border only as wide as the content */
+
+}
+
+#AboutUs {
+    text-align: center;
+}
+

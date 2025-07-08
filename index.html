@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Muskan Eyebrows</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/Muskan_Eyebrows_Transparent.png" alt="Muskan Eyebrows Logo">
+        </div>
+        <div class="tab-container">
+            <button class="tab" onclick="langName('Home', this, 'rgb(243, 122, 122)')" id="defaultOpen">Home</button>
+            <button class="tab" onclick="langName('Services', this, 'rgb(243, 122, 122)')">Services</button>
+            <button class="tab" onclick="langName('AboutUs', this, 'rgb(243, 122, 122)')">About Us</button>
+        </div>
+    </div>
+    
+    
+    
+
+    <!-- Home Section -->
+    <div id="Home" class="tabcontent home-page">
+        <div class="Welcome">
+            <h1>Welcome</h1>
+            <p>Smile</p>
+            <p class="special-text">Happy Skin Looks Gorgeous On You</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+            <p>Phone: (609) 200 3135</p>
+            <p>Address: 865 Cooper Landing Rd #7, Cherry Hill Township, NJ 08002</p>
+        </div>
+
+        <div class="Book">
+            <h3>Book Now</h3>
+            <p>Interested in our services? Check them out!</p>
+            <button class="book-now-button" onclick="navigateToServices()" aria-label="Navigate to Services">Explore Services</button>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="Services" class="tabcontent">
+        <div class="service-page">
+            <h1>Our Services</h1>
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Eyebrow Threading</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Men Eyebrows $16.00</h2>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS. CASH TIP</p>
+                        <p>** BASE PRICES ARE LISTED **</p>
+                        <p>PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Men Eyebrows')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Threading Brow Shaping  $13.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE WILL APPLY WHEN PAYING WITH CARD.</p>
+                        <p>** CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Walk In - FIT ME IN - ADDED ON THE WAITLIST  $20.00</h2>
+                        <p>The Booking Site shows NO AVAILABILITY/BOOKED OUT.</p>
+                        <p>Would like to be squeezed in? THIS SENDS A REQUEST AND ADDS YOU TO THE WAITLIST.</p>
+                        <p>REQUEST IS INSTANT BUT PLEASE ALLOW SOME TIME FOR THE REQUEST TO BE APPROVED.</p>
+                        <p>* ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE GETTING THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Brow and Lip $23.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Chin  $11.00</h2>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>** NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD. ** CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Forehead  $10.00</h2>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP/NO SKIN PRODUCTS **</p>
+                        <p>RECOMMEND NOT TO TWEEZE, WAX FOR 4 WEEKS, OR IN BETWEEN YOUR CYCLE.</p>
+                        <p>** BASE PRICES ARE LISTED ** PRICES ARE SUBJECT TO CHANGE PER CLIENT'S NEED.</p>
+                        <p>* PLEASE CHECK IN PERSON - BEFORE THE SERVICE.</p>
+                        <p>NON-CASH ADJUSTMENT FEE APPLIES WHEN PAYING BY CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Brow Henna $30.00 </h2>
+                        <p>Henna Brow Tint - This service tints the brow hair for 1 WEEK also stains the skin beneath the brows for upto a weeks giving the brow more of filled in look *Our Henna products are made with plant based products, no chemicals on the skin.</p>
+                        <p>Consultation is recommended results may very depending on skin type and aftercare</p>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE*NONCASH ADJUSTMENT FEE</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Eyelash Extensions</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Eyelash Extensions Set Hybrid $250.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP ** PLEASE ARRIVE WITHOUT ANY SKIN CARE PRODUCTS</p>
+                        <p>*** RECOMMEND TO WASH ,SCRUB EYES THOROUGHLY BEFORE ARRIVING</p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE.</p>
+                        <p>**NON CASH ADJUSTMENT FEE APPLY PAYING CARD.</p>
+                        <p>**CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Eyelash Extensions Set $200.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP ** PLEASE ARRIVE WITHOUT ANY SKIN CARE PRODUCTS</p>
+                        <p>*** RECOMMEND TO WASH ,SCRUB EYES THOROUGHLY BEFORE ARRIVING</p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE.</p>
+                        <p>**NON CASH ADJUSTMENT FEE APPLY PAYING CARD.</p>
+                        <p>**CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div> 
+                    <div class="card">
+                        <h2>Eyelash Extensions Re-Touch 3 weeks Refill $108.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP ** PLEASE ARRIVE WITHOUT ANY SKIN CARE PRODUCTS</p>
+                        <p>*** RECOMMEND TO WASH ,SCRUB EYES THOROUGHLY BEFORE ARRIVING</p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE.</p>
+                        <p>**NON CASH ADJUSTMENT FEE APPLY PAYING CARD.</p>
+                        <p>**CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Lash Henna $30.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP ** PLEASE ARRIVE WITHOUT ANY SKIN CARE PRODUCTS</p>
+                        <p>*** RECOMMEND TO WASH ,SCRUB EYES THOROUGHLY BEFORE ARRIVING</p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE.</p>
+                        <p>**NON CASH ADJUSTMENT FEE APPLY PAYING CARD.</p>
+                        <p>**CASH TIP</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Skin Care</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Customized Facials $150.00</h2>
+                        <p>PLEASE VIEW YOUR CONFIRMATION EMAIL</p>
+                        <p>PLEASE PLAN YOUR TRAVELS ACCORDINGLY</p>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP</p>
+                        <p>PLEASE ARRIVE WITHOUT ANY SKIN PRODUCTS</p>
+                        <p>A Luxurious deep cleansing treatment goes well beyond what a traditional facial will do. This Facials pairs well with your skins type and what your skin needs. This treatment will speed up skin cell turnover for an overall healthy skin.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class = "card">
+                        <h2>Hydra Facial $250.00</h2>
+                        <p>Only Hydra Facial uses vortex fusion technology to refresh and revive any skin type, providing a non-invasive, transformative skin health treatment for lasting results. Each treatment deeply cleanses, extracts, and hydrates the skin, offering personalized boosters for specific skin concerns. Results are immediate,pain-free and glowing, boosting confidence with no downtime. Adding Super Booster Serum</p>
+                        <p>Additional Cost</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class = "card">
+                        <h2>Boosters Super Serums $50.00</h2>
+                        <p>Boosters Super Serums are powerful and concentrated formulas designed to address and effectively treat specific skincare concerns. Enhance the effectiveness of your skincare routine by incorporating these potent serums into your Hydrafacial treatment today</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Add To Your Appointment</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Dermaplaning $25.00</h2>
+                        <p>
+                            Unlike traditional shaving, Dermaplaning uses a smaller blade to gently exfoliate dead skin cells and remove fine facial hair, leaving skin more even in tone and texture. It works on all skin types and is <strong><em>recommended every 4 to 5 weeks</em></strong> for optimal results.
+                        </p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Led Light Therapy $25.00</h2>
+                        <p>
+                            Looking to enhance your natural skin tone, reduce appearance of wrinkles and fine lines , and stimulate your natural collagen . May Add this to your monthly treatments. Recommended every 4 to 5 weeks
+                        </p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>High Frequency $20.00</h2>
+                        <p>
+                            High Frequency oxygenates the surface of the skin , kills acne bacteria , stimulates circulation and aids in detoxification, contracts blood vessel minimizing red inflamed skin. Can be used anywhere on the body. Recommended every 4 to 5 weeks.
+                            
+                        </p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Microdermabrasion $55.00</h2>
+                        <p>
+                            Microdermabrasion is a minimally invasive procedure used to renew overall skin tone and texture. Special applicator is used with an abrasive surface to gently sand away the thick layer of the skin to rejuvenate the skin. Safe Procedure for most skin types.Recommended every 4 to 5 weeks .
+
+                        </p>
+                        <br>
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Hand or Foot Treatment $20.00</h2>
+                        
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Hot Stones $25.00</h2>
+                        
+                        <p>ALL SALES ARE FINAL. NO REFUNDS</p>
+                        <br>
+                        <p>**BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>*PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Waxing</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Full Face $45.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Side Burns $16.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Lip $10.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Underarms $28.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Full Arms $70.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Chin $12.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Nose $12.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                    <div class="card">
+                        <h2>Brazilian $70.00</h2>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Lash Lift Monthly Special</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Lash Lift W/Kertain Treatment $125.00 </h2>
+                        <p>The elleebana lash lift is a semi permanent treatment for natural lashes giving them the illusion of perfectly curled and noticeably longer , lifted lashes. It is a great low maintenance alternative to lash extensions and can last up to 6-7weeks. Tint is not included.</p>
+                        <p>PLEASE ARRIVE WITHOUT ANY MAKE UP SKIN CARE PRODUCTS</p>
+                        <br>
+                        <p>BASE PRICES ARE LISTED** PRICES ARE SUBJECTED TO CHANGE PER CLIENTS NEED</p>
+                        <p>PLEASE CHECK IN PERSON- BEFORE THE SERVICE. NON CASH ADJUSTMENT FEE PAYING CARD.</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                </div>
+            </details>
+
+            <details class="dropdown-item">
+                <summary class="dropdown-header">Semi-Permanent Make Up</summary>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Consultation</h2>
+                        <ol>
+                            <li>Consultation includes a Color and Shape Consult</li>
+                            <li>Pre Procedure Questionnaires</li>
+                            <li>Medical History Review</li>
+                            <li>Method Theory</li>
+                            <li>Pre & Post Procedure Instructions</li>
+                            <li>Maintenance</li>
+                            <li>Pricing</li>
+                        </ol>
+                        <br>
+                        <p>Appointment Applicable For PMU -BROWS, EYELINER AND LIPS</p>
+                        <br>
+                        <p>** PLEASE ARRIVE WITHOUT ANY MAKE UP</p>
+                        <p>** PLEASE ARRIVE WITHOUT ANY SKIN CARE PRODUCTS</p>
+                        <p>*** CLIENTS WITH PREVIOUS WORK MUST SEND PIC TAKEN OUTDOOR<p>
+                        <p>* WITHOUT MAKE UP</p>
+                        <p>TEXT 609-200-3135 BETWEEN 9A-6P</p>
+                        <button class="schedule-button" onclick="scheduleNow('Threading Brow Shaping')">Schedule Now</button>
+
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="AboutUs" class="tabcontent">
+        <h3>About Us</h3>
+    
+        <!-- Business Hours Section -->
+        <div id="business-hours">
+            <h4>Business Hours</h4>
+            <br>
+            <sub>Sunday: Closed</sub><br>
+            <sub>Monday: 11:00 AM - 5:40 PM</sub><br>
+            <sub>Tuesday: Closed</sub><br>
+            <sub>Wednesday: Saturday: 11:00 AM - 6:00 PM</sub>
+        </div>
+    
+        <!-- Employees Section -->
+        <div id="employees">
+            <h5>Our Employees</h5>
+            <br>
+            <p>Muskan Sharma</p>
+            <p>S Sharma</p>
+            <p>Soniya S</p>
+        </div>
+    
+        <!-- Cancellation Policy Section -->
+        <div id="cancellation-policy">
+            <h6>Appointment Cancellation Policy</h6>
+            <p>
+                Your appointments are very important to us. Please provide a 24-hour notice for cancellations by texting (609) 200 3135. 
+                No-call or last-minute cancellations will incur a 50% fee. Reservation deposits are non-refundable. All sales are final.
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <div id="footer" class="footers-content">
+        <p>&copy; 2024 Muskan Eyebrows. All Rights Reserved.</p>
+        <a href="https://www.instagram.com/MuskanEyebrows/" target="_blank" class="instagram-link" aria-label="Visit Muskan Eyebrows on Instagram">
+            <img src="images/instagram-removebg-preview.png" alt="Instagram Logo" class="instagram-logo">
+        </a>
+    </div>
+    
+    <!-- Modal Structure -->
+    <!-- Modal Structure -->
+    <div id="scheduleModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h4>Schedule Your Appointment</h4>
+        <br>
+        <form id="scheduleForm">
+            <!-- Service Dropdown -->
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                
+                <!-- Eyebrow Threading -->
+                <optgroup label="Eyebrow Threading">
+                    <option value="Men Eyebrows">Men Eyebrows ($16.00)</option>
+                    <option value="Threading Brow Shaping">Threading Brow Shaping ($13.00)</option>
+                    <option value="Walk In - Fit Me In">Walk In - Fit Me In ($20.00)</option>
+                    <option value="Brow and Lip">Brow and Lip ($23.00)</option>
+                    <option value="Chin">Chin ($11.00)</option>
+                    <option value="Forehead">Forehead ($10.00)</option>
+                    <option value="Brow Henna">Brow Henna ($30.00)</option>
+                </optgroup>
+                
+                <!-- Eyelash Extensions -->
+                <optgroup label="Eyelash Extensions">
+                    <option value="Eyelash Extensions Set Hybrid">Eyelash Extensions Set Hybrid ($250.00)</option>
+                    <option value="Eyelash Extensions Set">Eyelash Extensions Set ($200.00)</option>
+                    <option value="Eyelash Extensions Re-Touch">Eyelash Extensions Re-Touch ($108.00)</option>
+                    <option value="Lash Henna">Lash Henna ($30.00)</option>
+                </optgroup>
+                
+                <!-- Skin Care -->
+                <optgroup label="Skin Care">
+                    <option value="Customized Facials">Customized Facials ($150.00)</option>
+                    <option value="Hydra Facial">Hydra Facial ($250.00)</option>
+                    <option value="Boosters Super Serums">Boosters Super Serums ($50.00)</option>
+                </optgroup>
+                
+                <!-- Add To Your Appointment -->
+                <optgroup label="Add To Your Appointment">
+                    <option value="Dermaplaning">Dermaplaning ($25.00)</option>
+                    <option value="Led Light Therapy">Led Light Therapy ($25.00)</option>
+                    <option value="High Frequency">High Frequency ($20.00)</option>
+                    <option value="Microdermabrasion">Microdermabrasion ($55.00)</option>
+                    <option value="Hand or Foot Treatment">Hand or Foot Treatment ($20.00)</option>
+                    <option value="Hot Stones">Hot Stones ($25.00)</option>
+                </optgroup>
+                
+                <!-- Waxing -->
+                <optgroup label="Waxing">
+                    <option value="Full Face">Full Face ($45.00)</option>
+                    <option value="Side Burns">Side Burns ($16.00)</option>
+                    <option value="Lip">Lip ($10.00)</option>
+                    <option value="Underarms">Underarms ($28.00)</option>
+                    <option value="Full Arms">Full Arms ($70.00)</option>
+                    <option value="Chin">Chin ($12.00)</option>
+                    <option value="Nose">Nose ($12.00)</option>
+                    <option value="Brazilian">Brazilian ($70.00)</option>
+                </optgroup>
+                
+                <!-- Lash Lift -->
+                <optgroup label="Lash Lift Monthly Special">
+                    <option value="Lash Lift with Keratin Treatment">Lash Lift with Keratin Treatment ($125.00)</option>
+                </optgroup>
+                
+                <!-- Semi-Permanent Makeup -->
+                <optgroup label="Semi-Permanent Make Up">
+                    <option value="Consultation">Consultation</option>
+                </optgroup>
+            </select>
+            
+            <!-- Name Field -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <!-- Email Field -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <!-- Preferred Date -->
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <!-- Preferred Time -->
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for = "phone">Phone Number</label>
+            <input type = "phone" id = "phone" name = "phone" required>           
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
