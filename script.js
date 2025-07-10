@@ -56,8 +56,7 @@ document.getElementById("scheduleForm").addEventListener("submit", function (eve
         phone: formData.get("phone"),
     };
 
-    // If you don’t have a backend yet, comment out this axios call
-    axios.get("http://localhost:8080/booking")
+    axios.post("http://localhost:8080/api/v1/booking", appointmentDetails)
         .then(response => {
             console.log("Success:", response.data);
             alert("Your appointment has been scheduled successfully!");
